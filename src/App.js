@@ -62,6 +62,7 @@ function App() {
 
   return (
     <div className="App">
+      <h3> Scarlett Todo </h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -72,7 +73,7 @@ function App() {
       </form>
       {todos.map((todo) => (
         <div key={todo.id}>
-          {todoEditing == todo.id ? (
+          {todoEditing === todo.id ? (
             <input
               type="text"
               onChange={(e) => setEditingText(e.target.value)}
